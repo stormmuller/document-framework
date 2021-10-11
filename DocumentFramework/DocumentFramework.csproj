@@ -8,18 +8,25 @@
     <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
     <PackageReference Include="MongoDB.Driver" Version="2.13.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    
+    <None Include="../README.md" Pack="true" PackagePath="/"/>
   </ItemGroup>
 
   <PropertyGroup>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>DocumentFramework</PackageId>
-    <Version>0.0.1-alpha</Version>
+    <Version>0.0.4-alpha</Version>
     <Title>Document Framework</Title>
     <PackageDescription>A lightweight Mongo ORM for dotnet</PackageDescription>
     <PackageTags>mongodb;orm;migrations;database</PackageTags>
-    <license>https://github.com/stormmuller/document-framework/blob/main/LICENSE</license>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Authors>Storm Muller</Authors>
     <Company>Storm Muller</Company>
+    <RepositoryUrl>https://github.com/stormmuller/document-framework</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/stormmuller/document-framework</PackageProjectUrl>
+    <Copyright>FixedTypes (c) 2019, Storm Muller All rights reserved</Copyright>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
 </Project>
