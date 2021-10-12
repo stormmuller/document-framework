@@ -2,7 +2,7 @@
 
 # Document Framework
 
-A light weight ORM for moongo and dotnet. 
+A light weight ORM for mongo and dotnet. 
 
 ## Notable features
 
