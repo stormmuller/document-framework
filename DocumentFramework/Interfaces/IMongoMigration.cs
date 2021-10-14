@@ -4,5 +4,6 @@ namespace DocumentFramework
   {
     string MigrationName { get; }
     void MigrateForward();
+    void MigrationBackward();
   }
 }
