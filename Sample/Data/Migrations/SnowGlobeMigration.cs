@@ -19,13 +19,19 @@ namespace Ornaments
         {
             var snowGlobeCollection = _database.GetCollection<SnowGlobe>("snowGlobes");
 
-            var snowGlobes = new List<SnowGlobe> {
-            new SnowGlobe { Name = "White Winter", Description = "cottage covered in snow" },
-            new SnowGlobe { Name = "White Joy", Description = "snowman smiling and holding a large muffin" },
-            new SnowGlobe { Name = "Brightness", Description = "shooting star" }
-        };
+            var snowGlobes = new List<SnowGlobe> 
+                {
+                    new SnowGlobe { Name = "White Winter", Description = "cottage covered in snow" },
+                    new SnowGlobe { Name = "White Joy", Description = "snowman smiling and holding a large muffin" },
+                    new SnowGlobe { Name = "Brightness", Description = "shooting star" }
+                };
 
             snowGlobeCollection.InsertMany(snowGlobes);
+        }
+
+        public void MigrationBackward()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
