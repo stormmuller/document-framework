@@ -1,5 +1,6 @@
 using DocumentFramework;
 using System.Diagnostics.CodeAnalysis;
+using System.Reflection;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -7,7 +8,7 @@ namespace Microsoft.Extensions.DependencyInjection
   {
     public static IServiceCollection AddMongoContext<TMongoContext>([NotNullAttribute] this IServiceCollection serviceCollection) where TMongoContext : MongoContext
     {
-      serviceCollection.AddByConventionAsSingleton<IMongoMigration>();
+      serviceCollection.AddByConventionAsSingleton<IMongoMigration>(Assembly.GetCallingAssembly());
       serviceCollection.AddTransient<TMongoContext>();
 
       return serviceCollection;
