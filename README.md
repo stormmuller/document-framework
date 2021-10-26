@@ -2,7 +2,9 @@
 
 [![.NET Package](https://github.com/stormmuller/document-framework/actions/workflows/build-and-deploy-package.yml/badge.svg)](https://github.com/stormmuller/document-framework/actions/workflows/build-and-deploy-package.yml)
 [![.NET Tool](https://github.com/stormmuller/document-framework/actions/workflows/build-and-deploy-tool.yml/badge.svg)](https://github.com/stormmuller/document-framework/actions/workflows/build-and-deploy-tool.yml)
-[![Nuget](https://img.shields.io/nuget/vpre/DocumentFramework)](https://www.nuget.org/packages/DocumentFramework)
+-
+[![Nuget Package](https://img.shields.io/nuget/vpre/DocumentFramework?label=Nuget%20Package)](https://www.nuget.org/packages/DocumentFramework)
+[![Nuget Tool](https://img.shields.io/nuget/vpre/DocumentFramework.Tool?label=CLI)](https://www.nuget.org/packages/DocumentFramework.Tool)
 
 A light weight ORM for mongo and dotnet. 
 
