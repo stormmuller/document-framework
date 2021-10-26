@@ -1,6 +1,7 @@
 # Document Framework
 
-[![.NET](https://github.com/stormmuller/document-framework/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/stormmuller/document-framework/actions/workflows/dotnet.yml)
+[![.NET Package](https://github.com/stormmuller/document-framework/actions/workflows/build-and-deploy-package.yml/badge.svg)](https://github.com/stormmuller/document-framework/actions/workflows/build-and-deploy-package.yml)
+[![.NET Tool](https://github.com/stormmuller/document-framework/actions/workflows/build-and-deploy-tool.yml/badge.svg)](https://github.com/stormmuller/document-framework/actions/workflows/build-and-deploy-tool.yml)
 [![Nuget](https://img.shields.io/nuget/vpre/DocumentFramework)](https://www.nuget.org/packages/DocumentFramework)
 
 A light weight ORM for mongo and dotnet. 
