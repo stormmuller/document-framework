@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "documentframework.tool": {
+      "version": "0.1.1-alpha",
+      "commands": [
+        "dotnet-df"
+      ]
+    }
+  }
+}

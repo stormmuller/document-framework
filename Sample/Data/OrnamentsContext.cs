@@ -3,7 +3,7 @@ using DocumentFramework;
 using Microsoft.Extensions.Logging;
 using MongoDB.Driver;
 
-namespace Ornaments
+namespace Ornaments.Data
 {
     public class OrnamentsContext : MongoContext
     {
@@ -12,7 +12,7 @@ namespace Ornaments
         public OrnamentsContext(IEnumerable<IMongoMigration> migrations, IMongoDatabase database, ILogger<MongoContext> logger)
             : base(migrations, database, logger)
         {
-            SnowGlobes = GetOrAddCollection<SnowGlobe>("snowGlobes");
+            SnowGlobes = GetOrAddCollection<SnowGlobe>("snow-globes");
         }
     }
 }

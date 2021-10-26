@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DocumentFramework" Version="0.0.7-alpha" />
+    <PackageReference Include="DocumentFramework" Version="0.1.1-alpha" />
     <PackageReference Include="MongoDB.Driver" Version="2.13.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />

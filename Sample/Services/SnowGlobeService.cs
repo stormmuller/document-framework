@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using MongoDB.Driver;
+using Ornaments.Data;
 
 namespace Ornaments
 {
@@ -13,6 +14,6 @@ namespace Ornaments
         }
 
         public IEnumerable<SnowGlobe> GetSnowGlobes() => _ornamentsContext.SnowGlobes
-                        .Find(snowGlobe => snowGlobe.Name.StartsWith("White")).ToEnumerable();
+                        .Find(snowGlobe => snowGlobe.Name.StartsWith("Winter")).ToEnumerable();
     }
 }
