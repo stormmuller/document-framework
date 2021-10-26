@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using DocumentFramework;
+using MongoDB.Driver;
+
+namespace {{namespaceName}}
+{
+    public class {{className}} : IMongoMigration
+    {
+        public string MigrationName => "{{migrationName}}";
+
+        private readonly IMongoDatabase _database;
+
+        public {{className}}(IMongoDatabase database)
+        {
+            _database = database;
+        }
+
+        public void MigrateForward()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void MigrationBackward()
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

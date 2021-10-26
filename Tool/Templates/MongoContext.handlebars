@@ -1,0 +1,17 @@
+using System.Collections.Generic;
+using DocumentFramework;
+using Microsoft.Extensions.Logging;
+using MongoDB.Driver;
+
+namespace {{namespaceName}}
+{
+    public class {{className}} : MongoContext
+    {
+
+        public {{className}}(IEnumerable<IMongoMigration> migrations, IMongoDatabase database, ILogger<MongoContext> logger)
+            : base(migrations, database, logger)
+        {
+
+        }
+    }
+}
