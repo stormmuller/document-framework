@@ -15,7 +15,7 @@
   <PropertyGroup>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>DocumentFramework</PackageId>
-    <Version>0.1.0-alpha</Version>
+    <Version>0.1.1-alpha</Version>
     <Title>Document Framework</Title>
     <PackageOutputPath>./nupkg</PackageOutputPath>
     <PackageDescription>A lightweight Mongo ORM for dotnet</PackageDescription>

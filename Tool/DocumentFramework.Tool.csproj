@@ -13,7 +13,7 @@
 
     <Title>Document Framework Tool</Title>
     <PackageId>DocumentFramework.Tool</PackageId>
-    <Version>0.1.0-alpha</Version>
+    <Version>0.1.1-alpha</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>dotnet-df</ToolCommandName>

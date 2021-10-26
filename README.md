@@ -25,6 +25,13 @@ public class Foo
 ```
 
 2. Create a `MongoContext`
+
+``` bash
+dotnet df dbcontext scaffold -c BarMongoContext
+```
+
+3. Add a collection for your model to you MongoContext
+
 ``` csharp
 public class BarMongoContext : MongoContext
 {
@@ -33,17 +40,23 @@ public class BarMongoContext : MongoContext
   public BarMongoContext(IMongoDatabase database, IEnumerable<IMongoMigration> migrations, ILogger<MongoContext> logger)
     : base(migrations, database, logger)
   {
-    Foos = GetOrAddCollection<Foo>("foos");
+    Foos = GetOrAddCollection<Foo>("foos"); // Add this line in you generated mongo context
   }
 }
 ```
 
-3. Create a migration 
+4. Create a migration 
+
+``` bash
+dotnet df migrations add SeedFoos
+```
+
+5. Implement the `MigrationForward` and `MigrateBackward` methods in your new migration
 
 ``` csharp
 public class SeedFoos : IMongoMigration
 {
-  public string MigrationName => "20210420000000_Foos";
+  public string MigrationName => "20210420000000_SeedFoos";
   private readonly IMongoDatabase _database;
 
   public SeedFoos(IMongoDatabase database)
@@ -60,10 +73,15 @@ public class SeedFoos : IMongoMigration
         new Foo { Text = "document-2" }
     });
   }
+
+  public void MigrateBackward()
+  {
+    throw new NotImplementedException();
+  }
 }
 ```
 
-4. Register Context and mongo database in the `ConfigureServices` method in your `Startup.cs`
+6. Register Context and mongo database in the `ConfigureServices` method in your `Startup.cs`
 
 ``` csharp
 services
@@ -71,7 +89,7 @@ services
     .AddTransient<IMongoDatabase>()
 ```
 
-5. Sync migrations in the `Configure` method in your `Startup.cs`
+7. Sync migrations in the `Configure` method in your `Startup.cs`
 
 ``` csharp
 app.ApplicationServices
@@ -79,7 +97,7 @@ app.ApplicationServices
         .SyncMigrations();
 ```
 
-6. Use the Mongo context to query collections
+7. Use the Mongo context to query collections
 
 ``` csharp
 public class SomeService
