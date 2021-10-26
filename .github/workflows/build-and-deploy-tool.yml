@@ -1,4 +1,4 @@
-name: .NET
+name: .NET Tool
 
 on:
   push:
@@ -18,9 +18,9 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore ./DocumentFramework/DocumentFramework.csproj
+      run: dotnet restore ./Tool/DocumentFramework.Tool.csproj
     - name: Build
-      run: dotnet build --no-restore ./DocumentFramework/DocumentFramework.csproj
+      run: dotnet build --no-restore ./Tool/DocumentFramework.Tool.csproj
     # - name: Test
     #   run: dotnet test --no-build --verbosity normal
     - name: Publish NuGet
@@ -29,9 +29,9 @@ jobs:
       uses: brandedoutcast/publish-nuget@v2.5.5
       with:
         # Filepath of the project to be packaged, relative to root of repository
-        PROJECT_FILE_PATH: ./DocumentFramework/DocumentFramework.csproj
+        PROJECT_FILE_PATH: ./Tool/DocumentFramework.Tool.csproj
         # NuGet package id, used for version detection & defaults to project name
-        PACKAGE_NAME: DocumentFramework
+        PACKAGE_NAME: DocumentFramework.Tool
         # Filepath with version info, relative to root of repository & defaults to PROJECT_FILE_PATH
         # VERSION_FILE_PATH: # optional
         # Regex pattern to extract version info in a capturing group
@@ -39,7 +39,7 @@ jobs:
         # Useful with external providers like Nerdbank.GitVersioning, ignores VERSION_FILE_PATH & VERSION_REGEX
         # VERSION_STATIC: # optional
         # Flag to toggle git tagging, enabled by default
-        # TAG_COMMIT: # optional, default is true
+        TAG_COMMIT: false # optional, default is true
         # Format of the git tag, [*] gets replaced with actual version
         #TAG_FORMAT: # optional, default is v*
         # API key to authenticate with NuGet server
